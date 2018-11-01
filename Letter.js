@@ -20,7 +20,7 @@ function LetterCheck (letter){
 
     // SECOND FUNCTION TO SWITCH GUESS TO TRUE IF USER GUESS MATCHES THE EXISTING CHARACTERS OF THE WORD
 
-    this.match = function () {
+    this.match = function (userGuess) {
         if (userGuess === this.character) {
             this.guess = true;
         }
