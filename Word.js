@@ -1,39 +1,34 @@
 var Letter = require('./Letter.js');
 
 
-function Word (letterObject) {
+function Word(letterObject) {
     this.array = [];
     letterGuessed = "";
 
     // WORD IS SPLITTED INTO LETTER OBJECT
 
-    letterObject.forEach(element => {
-        var letter = new Letter(element);
-
+    for (var i = 0; i < letterObject.length; i++) {
+        var letter = new Letter(letterObject[i]);
         this.array.push(letter);
-    
-    });
-
-    console.log(array);
+    };
 
     // LOGGING ENTIRE WORD STRING
 
-    this.completeWord = function (){
+    this.completeWord = function () {
 
-        this.array.forEach(element => {
-            letterGuessed += this.array[element] + " ";
-        });
-
-        console.log(letterGuessed);
+        letterGuessed = "";
+        for (var i = 0; i < this.array.length; i++) {
+            letterGuessed += this.array[i] + " ";
+        }
+        console.log(letterGuessed + "\n");
     };
 
     // CHECKING OF USER GUESS WITH LETTERS FROM CURRENTLY SELECTED WORD
 
-    this.userGuessed = function (){
-
-        this.array.forEach(element => {
-            this.array[element].match(param);
-        });
+    this.userGuessed = function (param) {
+        for (var i = 0; i < this.array.length; i++) {
+            this.array[i].match(param);
+        }
     };
 
 }
