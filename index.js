@@ -40,7 +40,7 @@ function game() {
         inquirer.prompt([
             {
                 type: "input",
-                message: "Guess a letter between A-Z!",
+                message: "Guess the Alt Rock Band with letters between A-Z!",
                 name: "userinput"
             }
         ])
